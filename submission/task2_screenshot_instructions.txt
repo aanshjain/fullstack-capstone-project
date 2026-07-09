@@ -1,0 +1,25 @@
+Take a screenshot named `userstories.png` from the public GitHub Issues page for `aanshjain/fullstack-capstone-project`.
+
+The screenshot must clearly show:
+- The repository name `fullstack-capstone-project`
+- At least 8 GitHub issues
+- Issue labels such as `new`, `icebox`, `technical debt`, or `backlog`
+
+Current repo status checked on July 9, 2026:
+- The public GitHub repo currently has 0 issues, so this task still requires manual GitHub issue creation.
+
+Create at least these 8 issues before taking the screenshot:
+1. Create user registration flow
+2. Implement login validation
+3. Add gift listing API
+4. Build gift detail page
+5. Add category-based search
+6. Improve profile update UX
+7. Add sentiment service integration
+8. Configure CI/CD pipeline verification
+
+Suggested labels:
+- `new`
+- `backlog`
+- `technical debt`
+- `icebox`

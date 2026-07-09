@@ -1,0 +1,12 @@
+Task 16 target file.
+
+The seed data contains a valid item id of `875`.
+
+Run:
+
+```bash
+{
+  echo 'curl -sS "<DEPLOYED_BACKEND_URL>/api/gifts/875"'
+  curl -sS "<DEPLOYED_BACKEND_URL>/api/gifts/875"
+} | tee submission/item_detail
+```

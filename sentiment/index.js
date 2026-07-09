@@ -1,13 +1,14 @@
+/*jshint esversion: 8 */
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const logger = require('./logger');
 const expressPino = require('express-pino-logger')({ logger });
 // Task 1: import the natural library
-const natural = require("natural")
+const natural = require("natural");
 
 // Task 2: initialize the express server
-const app = express()
+const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
@@ -48,11 +49,11 @@ app.post('/sentiment', async (req, res) => {
         logger.info(`Sentiment analysis result: ${analysisResult}`);
 
         // Task 6: send a status code of 200 with both sentiment score and the sentiment txt in the format { sentimentScore: analysisResult, sentiment: sentiment }
-        res.status(200).json({ sentimentScore: analysisResult, sentiment: sentiment })
+        res.status(200).json({ sentimentScore: analysisResult, sentiment: sentiment });
     } catch (error) {
         logger.error(`Error performing sentiment analysis: ${error}`);
         // Task 7: if there is an error, return a HTTP code of 500 and the json {'message': 'Error performing sentiment analysis'}
-        res.status(500).json({'message': 'Error performing sentiment analysis'})
+        res.status(500).json({'message': 'Error performing sentiment analysis'});
     }
 });
 

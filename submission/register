@@ -1,0 +1,18 @@
+Task 14 target file.
+
+Use a unique email so registration succeeds, then run:
+
+```bash
+EMAIL="ibmcapstone.$(date +%s)@example.com"
+PASSWORD="Passw0rd123!"
+{ 
+  echo "EMAIL=$EMAIL"
+  echo "PASSWORD=$PASSWORD"
+  echo "curl -sS -X POST <DEPLOYED_BACKEND_URL>/api/auth/register ..."
+  curl -sS -X POST "<DEPLOYED_BACKEND_URL>/api/auth/register" \
+    -H "Content-Type: application/json" \
+    -d "{\"firstName\":\"IBM\",\"lastName\":\"Capstone\",\"email\":\"${EMAIL}\",\"password\":\"${PASSWORD}\"}"
+} | tee submission/register
+```
+
+Reuse the same `EMAIL` and `PASSWORD` values for Task 15.

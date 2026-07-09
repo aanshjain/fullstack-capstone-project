@@ -1,0 +1,15 @@
+Task 15 target file.
+
+Run this with the same credentials used in `submission/register`:
+
+```bash
+EMAIL="PASTE_THE_EMAIL_FROM_TASK_14"
+PASSWORD="PASTE_THE_PASSWORD_FROM_TASK_14"
+{
+  echo "EMAIL=$EMAIL"
+  echo "curl -sS -X POST <DEPLOYED_BACKEND_URL>/api/auth/login ..."
+  curl -sS -X POST "<DEPLOYED_BACKEND_URL>/api/auth/login" \
+    -H "Content-Type: application/json" \
+    -d "{\"email\":\"${EMAIL}\",\"password\":\"${PASSWORD}\"}"
+} | tee submission/login
+```

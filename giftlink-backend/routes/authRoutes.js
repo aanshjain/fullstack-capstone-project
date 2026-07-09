@@ -112,10 +112,29 @@ router.put('/update', async (req, res) => {
         const collection = db.collection("users");
 
         const existingUser = await collection.findOne({ email });
+        if (!existingUser) {
+            logger.error('User not found');
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        const updatedFields = {};
+        if (req.body.firstName || req.body.name) {
+            updatedFields.firstName = req.body.firstName || req.body.name;
+        }
+        if (req.body.lastName) {
+            updatedFields.lastName = req.body.lastName;
+        }
+
         existingUser.updatedAt = new Date();
+        updatedFields.updatedAt = existingUser.updatedAt;
 
         // Task 6: update user credentials in database
-        const updatedUser = await collection.findOneAndUpdate({ email }, { $set: existingUser }, { returnDocument: 'after' });
+        const result = await collection.findOneAndUpdate(
+            { email },
+            { $set: updatedFields },
+            { returnDocument: 'after' }
+        );
+        const updatedUser = result.value;
         // Task 7: create JWT authentication using secret key from .env file
         const payload = {
             user: {
@@ -126,10 +145,10 @@ router.put('/update', async (req, res) => {
         const authtoken = jwt.sign(payload, JWT_SECRET);
         res.json({ authtoken });
     } catch (e) {
+        logger.error(e);
         return res.status(500).send('Internal server error');
 
     }
 });
 
 module.exports = router;
-

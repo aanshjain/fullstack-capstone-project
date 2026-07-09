@@ -1,0 +1,17 @@
+Take a screenshot named `deployed_landingpage.png` after deploying the site.
+
+The screenshot must clearly show all of these:
+- The full deployment URL in the browser address bar
+- The title `GiftLink`
+- The site description/tagline
+- The `Get Started` button
+
+The landing page content already exists in `giftlink-frontend/public/home.html`.
+
+Current status:
+- The repository does not include an active public deployment URL for this landing page, so this task still requires manual deployment.
+
+Recommended screen to capture:
+- Open the deployed landing page
+- Keep the browser zoom at 100%
+- Make sure the visible page shows the heading, subheading, quote, and `Get Started` button in one frame

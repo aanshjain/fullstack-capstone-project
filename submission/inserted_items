@@ -1,0 +1,15 @@
+Task 3 target file.
+
+Run this from the repository root after MongoDB is reachable:
+
+```bash
+cd giftlink-backend/util/import-mongo
+npm install
+node index.js | tee ../../submission/inserted_items
+```
+
+Expected evidence:
+- Output should show a successful MongoDB connection
+- Output should show `Inserted documents: 16`
+
+If the database was already seeded, clear the `gifts` collection first or use a fresh MongoDB instance so the insert count appears.

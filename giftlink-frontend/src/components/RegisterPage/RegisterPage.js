@@ -21,7 +21,7 @@ function RegisterPage() {
                 method: 'POST',
                 //Task 7: Set headers
                 headers: {
-                    'content-type': 'application/json',
+                    'Content-Type': 'application/json',
                 },
                 //Task 8: Set body to send user details
                 body: JSON.stringify({

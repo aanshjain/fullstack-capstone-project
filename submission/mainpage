@@ -1,0 +1,16 @@
+Task 13 target file.
+
+Replace `<DEPLOYED_BACKEND_URL>` with your live backend base URL, then run:
+
+```bash
+curl -sS "<DEPLOYED_BACKEND_URL>/api/gifts" | tee submission/mainpage
+```
+
+Expected result:
+- JSON array listing all gifts for users
+
+If you want the command text included in the file too, run:
+
+```bash
+{ echo 'curl -sS "<DEPLOYED_BACKEND_URL>/api/gifts"'; curl -sS "<DEPLOYED_BACKEND_URL>/api/gifts"; } | tee submission/mainpage
+```

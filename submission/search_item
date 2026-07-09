@@ -1,0 +1,12 @@
+Task 17 target file.
+
+The seed data contains gifts in the `Kitchen` category.
+
+Run:
+
+```bash
+{
+  echo 'curl -sS "<DEPLOYED_BACKEND_URL>/api/search?category=Kitchen"'
+  curl -sS "<DEPLOYED_BACKEND_URL>/api/search?category=Kitchen"
+} | tee submission/search_item
+```

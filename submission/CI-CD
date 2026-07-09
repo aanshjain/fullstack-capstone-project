@@ -1,0 +1,18 @@
+Task 18 target file.
+
+The public GitHub repository already has a successful Actions workflow run:
+- Workflow: `CI/CD`
+- Run URL: https://github.com/aanshjain/fullstack-capstone-project/actions/runs/29018640065
+- Checked on July 9, 2026: status `completed`, conclusion `success`
+
+Recommended command if GitHub CLI is available and authenticated:
+
+```bash
+gh run view 29018640065 --repo aanshjain/fullstack-capstone-project --log | tee submission/CI-CD
+```
+
+Visible successful jobs in that run:
+- `Lint JavaScript Files`
+- `Build client`
+
+If `gh` is not available, open the run URL above, expand both jobs, copy the full visible logs, and save them into this file.
